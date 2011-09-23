@@ -6,8 +6,6 @@
 //  Copyright 2011 Penguins With Mustaches. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
-
 @interface Stock : NSObject {
     NSString *name;
     NSArray *purchases;

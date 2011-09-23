@@ -6,8 +6,6 @@
 //  Copyright 2011 Penguins With Mustaches. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
-
 @interface Player : NSObject {
     NSNumber *cash;
     NSString *name;

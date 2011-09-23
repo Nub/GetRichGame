@@ -34,8 +34,8 @@
 		4B440436142D4BE100DCBD50 /* BiggerWalletAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BiggerWalletAppDelegate.h; sourceTree = "<group>"; };
 		4B440437142D4BE100DCBD50 /* BiggerWalletAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BiggerWalletAppDelegate.m; sourceTree = "<group>"; };
 		4B44043A142D4BE100DCBD50 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		4B44043C142D4BE100DCBD50 /* BiggerWalletViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BiggerWalletViewController.h; sourceTree = "<group>"; };
-		4B44043D142D4BE100DCBD50 /* BiggerWalletViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BiggerWalletViewController.m; sourceTree = "<group>"; };
+		4B44043C142D4BE100DCBD50 /* BiggerWalletViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BiggerWalletViewController.h; path = ../BiggerWalletViewController.h; sourceTree = "<group>"; };
+		4B44043D142D4BE100DCBD50 /* BiggerWalletViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = BiggerWalletViewController.m; path = ../BiggerWalletViewController.m; sourceTree = "<group>"; };
 		4B440440142D4BE100DCBD50 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/BiggerWalletViewController.xib; sourceTree = "<group>"; };
 		4B440448142D4C1D00DCBD50 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
 		4B440449142D4C1D00DCBD50 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
@@ -94,10 +94,6 @@
 				4B440447142D4C1D00DCBD50 /* Classes */,
 				4B440436142D4BE100DCBD50 /* BiggerWalletAppDelegate.h */,
 				4B440437142D4BE100DCBD50 /* BiggerWalletAppDelegate.m */,
-				4B440439142D4BE100DCBD50 /* MainWindow.xib */,
-				4B44043C142D4BE100DCBD50 /* BiggerWalletViewController.h */,
-				4B44043D142D4BE100DCBD50 /* BiggerWalletViewController.m */,
-				4B44043F142D4BE100DCBD50 /* BiggerWalletViewController.xib */,
 				4B44042E142D4BE100DCBD50 /* Supporting Files */,
 			);
 			path = BiggerWallet;
@@ -117,6 +113,15 @@
 		4B440447142D4C1D00DCBD50 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				807E6348142D532800916E6B /* UI */,
+				807E6346142D531F00916E6B /* Content */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		807E6346142D531F00916E6B /* Content */ = {
+			isa = PBXGroup;
+			children = (
 				4B440448142D4C1D00DCBD50 /* Player.h */,
 				4B440449142D4C1D00DCBD50 /* Player.m */,
 				4B44044A142D4C1D00DCBD50 /* Stock.h */,
@@ -126,7 +131,18 @@
 				4B44044E142D4C1D00DCBD50 /* StockUpdate.h */,
 				4B44044F142D4C1D00DCBD50 /* StockUpdate.m */,
 			);
-			path = Classes;
+			name = Content;
+			sourceTree = "<group>";
+		};
+		807E6348142D532800916E6B /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				4B440439142D4BE100DCBD50 /* MainWindow.xib */,
+				4B44043C142D4BE100DCBD50 /* BiggerWalletViewController.h */,
+				4B44043D142D4BE100DCBD50 /* BiggerWalletViewController.m */,
+				4B44043F142D4BE100DCBD50 /* BiggerWalletViewController.xib */,
+			);
+			name = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,6 +235,7 @@
 				4B44043A142D4BE100DCBD50 /* en */,
 			);
 			name = MainWindow.xib;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		4B44043F142D4BE100DCBD50 /* BiggerWalletViewController.xib */ = {
@@ -227,6 +244,7 @@
 				4B440440142D4BE100DCBD50 /* en */,
 			);
 			name = BiggerWalletViewController.xib;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -316,6 +334,7 @@
 				4B440446142D4BE100DCBD50 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

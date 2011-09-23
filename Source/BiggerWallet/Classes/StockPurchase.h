@@ -6,8 +6,6 @@
 //  Copyright 2011 Penguins With Mustaches. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
-
 @class StockUpdate;
 
 @interface StockPurchase : NSObject {
