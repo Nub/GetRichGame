@@ -1,0 +1,323 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4B440428142D4BE100DCBD50 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B440427142D4BE100DCBD50 /* UIKit.framework */; };
+		4B44042A142D4BE100DCBD50 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B440429142D4BE100DCBD50 /* Foundation.framework */; };
+		4B44042C142D4BE100DCBD50 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B44042B142D4BE100DCBD50 /* CoreGraphics.framework */; };
+		4B440432142D4BE100DCBD50 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4B440430142D4BE100DCBD50 /* InfoPlist.strings */; };
+		4B440434142D4BE100DCBD50 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B440433142D4BE100DCBD50 /* main.m */; };
+		4B440438142D4BE100DCBD50 /* BiggerWalletAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B440437142D4BE100DCBD50 /* BiggerWalletAppDelegate.m */; };
+		4B44043B142D4BE100DCBD50 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B440439142D4BE100DCBD50 /* MainWindow.xib */; };
+		4B44043E142D4BE100DCBD50 /* BiggerWalletViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B44043D142D4BE100DCBD50 /* BiggerWalletViewController.m */; };
+		4B440441142D4BE100DCBD50 /* BiggerWalletViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B44043F142D4BE100DCBD50 /* BiggerWalletViewController.xib */; };
+		4B440450142D4C1D00DCBD50 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B440449142D4C1D00DCBD50 /* Player.m */; };
+		4B440451142D4C1D00DCBD50 /* Stock.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B44044B142D4C1D00DCBD50 /* Stock.m */; };
+		4B440452142D4C1D00DCBD50 /* StockPurchase.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B44044D142D4C1D00DCBD50 /* StockPurchase.m */; };
+		4B440453142D4C1D00DCBD50 /* StockUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B44044F142D4C1D00DCBD50 /* StockUpdate.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4B440423142D4BE100DCBD50 /* BiggerWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BiggerWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B440427142D4BE100DCBD50 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		4B440429142D4BE100DCBD50 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4B44042B142D4BE100DCBD50 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		4B44042F142D4BE100DCBD50 /* BiggerWallet-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BiggerWallet-Info.plist"; sourceTree = "<group>"; };
+		4B440431142D4BE100DCBD50 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4B440433142D4BE100DCBD50 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4B440435142D4BE100DCBD50 /* BiggerWallet-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BiggerWallet-Prefix.pch"; sourceTree = "<group>"; };
+		4B440436142D4BE100DCBD50 /* BiggerWalletAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BiggerWalletAppDelegate.h; sourceTree = "<group>"; };
+		4B440437142D4BE100DCBD50 /* BiggerWalletAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BiggerWalletAppDelegate.m; sourceTree = "<group>"; };
+		4B44043A142D4BE100DCBD50 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		4B44043C142D4BE100DCBD50 /* BiggerWalletViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BiggerWalletViewController.h; sourceTree = "<group>"; };
+		4B44043D142D4BE100DCBD50 /* BiggerWalletViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BiggerWalletViewController.m; sourceTree = "<group>"; };
+		4B440440142D4BE100DCBD50 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/BiggerWalletViewController.xib; sourceTree = "<group>"; };
+		4B440448142D4C1D00DCBD50 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		4B440449142D4C1D00DCBD50 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
+		4B44044A142D4C1D00DCBD50 /* Stock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stock.h; sourceTree = "<group>"; };
+		4B44044B142D4C1D00DCBD50 /* Stock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stock.m; sourceTree = "<group>"; };
+		4B44044C142D4C1D00DCBD50 /* StockPurchase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StockPurchase.h; sourceTree = "<group>"; };
+		4B44044D142D4C1D00DCBD50 /* StockPurchase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StockPurchase.m; sourceTree = "<group>"; };
+		4B44044E142D4C1D00DCBD50 /* StockUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StockUpdate.h; sourceTree = "<group>"; };
+		4B44044F142D4C1D00DCBD50 /* StockUpdate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StockUpdate.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4B440420142D4BE100DCBD50 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B440428142D4BE100DCBD50 /* UIKit.framework in Frameworks */,
+				4B44042A142D4BE100DCBD50 /* Foundation.framework in Frameworks */,
+				4B44042C142D4BE100DCBD50 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4B440418142D4BE100DCBD50 = {
+			isa = PBXGroup;
+			children = (
+				4B44042D142D4BE100DCBD50 /* BiggerWallet */,
+				4B440426142D4BE100DCBD50 /* Frameworks */,
+				4B440424142D4BE100DCBD50 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4B440424142D4BE100DCBD50 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4B440423142D4BE100DCBD50 /* BiggerWallet.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4B440426142D4BE100DCBD50 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4B440427142D4BE100DCBD50 /* UIKit.framework */,
+				4B440429142D4BE100DCBD50 /* Foundation.framework */,
+				4B44042B142D4BE100DCBD50 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4B44042D142D4BE100DCBD50 /* BiggerWallet */ = {
+			isa = PBXGroup;
+			children = (
+				4B440447142D4C1D00DCBD50 /* Classes */,
+				4B440436142D4BE100DCBD50 /* BiggerWalletAppDelegate.h */,
+				4B440437142D4BE100DCBD50 /* BiggerWalletAppDelegate.m */,
+				4B440439142D4BE100DCBD50 /* MainWindow.xib */,
+				4B44043C142D4BE100DCBD50 /* BiggerWalletViewController.h */,
+				4B44043D142D4BE100DCBD50 /* BiggerWalletViewController.m */,
+				4B44043F142D4BE100DCBD50 /* BiggerWalletViewController.xib */,
+				4B44042E142D4BE100DCBD50 /* Supporting Files */,
+			);
+			path = BiggerWallet;
+			sourceTree = "<group>";
+		};
+		4B44042E142D4BE100DCBD50 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4B44042F142D4BE100DCBD50 /* BiggerWallet-Info.plist */,
+				4B440430142D4BE100DCBD50 /* InfoPlist.strings */,
+				4B440433142D4BE100DCBD50 /* main.m */,
+				4B440435142D4BE100DCBD50 /* BiggerWallet-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4B440447142D4C1D00DCBD50 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				4B440448142D4C1D00DCBD50 /* Player.h */,
+				4B440449142D4C1D00DCBD50 /* Player.m */,
+				4B44044A142D4C1D00DCBD50 /* Stock.h */,
+				4B44044B142D4C1D00DCBD50 /* Stock.m */,
+				4B44044C142D4C1D00DCBD50 /* StockPurchase.h */,
+				4B44044D142D4C1D00DCBD50 /* StockPurchase.m */,
+				4B44044E142D4C1D00DCBD50 /* StockUpdate.h */,
+				4B44044F142D4C1D00DCBD50 /* StockUpdate.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4B440422142D4BE100DCBD50 /* BiggerWallet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4B440444142D4BE100DCBD50 /* Build configuration list for PBXNativeTarget "BiggerWallet" */;
+			buildPhases = (
+				4B44041F142D4BE100DCBD50 /* Sources */,
+				4B440420142D4BE100DCBD50 /* Frameworks */,
+				4B440421142D4BE100DCBD50 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BiggerWallet;
+			productName = BiggerWallet;
+			productReference = 4B440423142D4BE100DCBD50 /* BiggerWallet.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4B44041A142D4BE100DCBD50 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "Penguins With Mustaches";
+			};
+			buildConfigurationList = 4B44041D142D4BE100DCBD50 /* Build configuration list for PBXProject "BiggerWallet" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 4B440418142D4BE100DCBD50;
+			productRefGroup = 4B440424142D4BE100DCBD50 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4B440422142D4BE100DCBD50 /* BiggerWallet */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4B440421142D4BE100DCBD50 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B440432142D4BE100DCBD50 /* InfoPlist.strings in Resources */,
+				4B44043B142D4BE100DCBD50 /* MainWindow.xib in Resources */,
+				4B440441142D4BE100DCBD50 /* BiggerWalletViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4B44041F142D4BE100DCBD50 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B440434142D4BE100DCBD50 /* main.m in Sources */,
+				4B440438142D4BE100DCBD50 /* BiggerWalletAppDelegate.m in Sources */,
+				4B44043E142D4BE100DCBD50 /* BiggerWalletViewController.m in Sources */,
+				4B440450142D4C1D00DCBD50 /* Player.m in Sources */,
+				4B440451142D4C1D00DCBD50 /* Stock.m in Sources */,
+				4B440452142D4C1D00DCBD50 /* StockPurchase.m in Sources */,
+				4B440453142D4C1D00DCBD50 /* StockUpdate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4B440430142D4BE100DCBD50 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4B440431142D4BE100DCBD50 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		4B440439142D4BE100DCBD50 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4B44043A142D4BE100DCBD50 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		4B44043F142D4BE100DCBD50 /* BiggerWalletViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4B440440142D4BE100DCBD50 /* en */,
+			);
+			name = BiggerWalletViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4B440442142D4BE100DCBD50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		4B440443142D4BE100DCBD50 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4B440445142D4BE100DCBD50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BiggerWallet/BiggerWallet-Prefix.pch";
+				INFOPLIST_FILE = "BiggerWallet/BiggerWallet-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		4B440446142D4BE100DCBD50 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BiggerWallet/BiggerWallet-Prefix.pch";
+				INFOPLIST_FILE = "BiggerWallet/BiggerWallet-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4B44041D142D4BE100DCBD50 /* Build configuration list for PBXProject "BiggerWallet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B440442142D4BE100DCBD50 /* Debug */,
+				4B440443142D4BE100DCBD50 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4B440444142D4BE100DCBD50 /* Build configuration list for PBXNativeTarget "BiggerWallet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B440445142D4BE100DCBD50 /* Debug */,
+				4B440446142D4BE100DCBD50 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4B44041A142D4BE100DCBD50 /* Project object */;
+}
