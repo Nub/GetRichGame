@@ -4,6 +4,7 @@
 //
 //  Created by Zachry Thayer on 9/23/11.
 //  Copyright 2011 Penguins With Mustaches. All rights reserved.
+//  Copyright 2011 Jos Kuijpers. All rights reserved.
 //
 
 #import "StockPurchase.h"
@@ -34,6 +35,8 @@
 
 }
 
+#pragma mark - Parsing
+
 
 + (StockPurchase *)instanceFromDictionary:(NSDictionary *)aDictionary {
 
@@ -53,6 +56,12 @@
     self.stockUpdate = [StockUpdate instanceFromDictionary:[aDictionary objectForKey:@"StockUpdate"]];
 
 }
+
++ (StockPurchase *)instanceFromJSONString:(NSString *)string {
+    return [self instanceFromDictionary:[string objectFromJSONString]];
+}
+
+#pragma mark - Serializing
 
 // NOTE: Might want to use getters and setters here instead of direct
 // ivar access. But if no overrides of those setters/getters happen

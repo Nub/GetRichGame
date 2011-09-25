@@ -21,6 +21,9 @@
 		4B440452142D4C1D00DCBD50 /* StockPurchase.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B44044D142D4C1D00DCBD50 /* StockPurchase.m */; };
 		4B440453142D4C1D00DCBD50 /* StockUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B44044F142D4C1D00DCBD50 /* StockUpdate.m */; };
 		80EF2C10142F61C000EBEFE9 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 80EF2C0F142F61C000EBEFE9 /* JSONKit.m */; };
+		80EF2C12142F682600EBEFE9 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80EF2C11142F682600EBEFE9 /* GameKit.framework */; };
+		80EF2C14142F682D00EBEFE9 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80EF2C13142F682D00EBEFE9 /* iAd.framework */; };
+		80EF2C16142F684300EBEFE9 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80EF2C15142F684300EBEFE9 /* StoreKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +51,9 @@
 		4B44044F142D4C1D00DCBD50 /* StockUpdate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StockUpdate.m; sourceTree = "<group>"; };
 		80EF2C0E142F61BF00EBEFE9 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
 		80EF2C0F142F61C000EBEFE9 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
+		80EF2C11142F682600EBEFE9 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		80EF2C13142F682D00EBEFE9 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		80EF2C15142F684300EBEFE9 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +61,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80EF2C16142F684300EBEFE9 /* StoreKit.framework in Frameworks */,
+				80EF2C14142F682D00EBEFE9 /* iAd.framework in Frameworks */,
+				80EF2C12142F682600EBEFE9 /* GameKit.framework in Frameworks */,
 				4B440428142D4BE100DCBD50 /* UIKit.framework in Frameworks */,
 				4B44042A142D4BE100DCBD50 /* Foundation.framework in Frameworks */,
 				4B44042C142D4BE100DCBD50 /* CoreGraphics.framework in Frameworks */,
@@ -84,6 +93,9 @@
 		4B440426142D4BE100DCBD50 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				80EF2C15142F684300EBEFE9 /* StoreKit.framework */,
+				80EF2C13142F682D00EBEFE9 /* iAd.framework */,
+				80EF2C11142F682600EBEFE9 /* GameKit.framework */,
 				4B440427142D4BE100DCBD50 /* UIKit.framework */,
 				4B440429142D4BE100DCBD50 /* Foundation.framework */,
 				4B44042B142D4BE100DCBD50 /* CoreGraphics.framework */,

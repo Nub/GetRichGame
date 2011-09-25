@@ -4,6 +4,7 @@
 //
 //  Created by Zachry Thayer on 9/23/11.
 //  Copyright 2011 Penguins With Mustaches. All rights reserved.
+//  Copyright 2011 Jos Kuijpers. All rights reserved.
 //
 
 #import "Player.h"
@@ -38,6 +39,7 @@
 
 }
 
+#pragma mark - Parsing
 
 + (Player *)instanceFromDictionary:(NSDictionary *)aDictionary {
 
@@ -73,6 +75,12 @@
 
 
 }
+
++ (Player *)instanceFromJSONString:(NSString *)string {
+    return [self instanceFromDictionary:[string objectFromJSONString]];
+}
+
+#pragma mark - Serializing
 
 // NOTE: Might want to use getters and setters here instead of direct
 // ivar access. But if no overrides of those setters/getters happen
@@ -114,6 +122,80 @@
 {
     return [NSString stringWithFormat:@"%@ {Cash %@, Name %@, Rank %@, Stocks %@}",
             [super description],cash,name,rank,stocks];
+}
+
+#pragma mark - Content Provider
+
+- (NSNumber *)netWorth {
+    return nil;
+}
+
+- (NSNumber *)netWorthOfStocks {
+    return nil;
+}
+
+- (Stock *)_stockObjectForName:(NSString *)stock
+{
+    if(stock == nil || stocks == nil)
+        return nil;
+    
+    for(Stock *st in stocks)
+    {
+        if([st isKindOfClass:[Stock class]])
+        {
+            if([st.name isEqualToString:stock])
+                return [[st retain] autorelease];
+        }
+    }
+    
+    return nil;
+}
+
+- (NSNumber *)netWorthOfStock:(NSString *)stock {
+    
+    Stock *theStock = [self _stockObjectForName:stock];
+    if(theStock == nil)
+        return nil;
+    
+    
+    return nil;
+}
+
+- (NSNumber *)netPurchasePriceOfStock:(NSString *)stock {
+    
+    Stock *theStock = [self _stockObjectForName:stock];
+    if(theStock == nil)
+        return nil;
+    
+    
+    return nil;
+}
+
+- (NSNumber *)numberOfShareInStock:(NSString *)stock {
+    
+    Stock *theStock = [self _stockObjectForName:stock];
+    if(theStock == nil)
+        return nil;
+    
+    return nil;
+}
+
+#pragma mark - Content Publisher
+
+- (BOOL)purchaseSharesInStock:(NSString *)stock amount:(NSNumber *)amount {
+    return NO;
+}
+
+- (BOOL)sellSharesInStock:(NSString *)stock amount:(NSNumber *)amount {
+    return NO;
+}
+
+- (BOOL)purchaseMoneyAmount:(NSNumber *)amount {
+    return NO;
+}
+
+- (void)synchronize {
+    return;
 }
 
 @end
