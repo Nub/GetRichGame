@@ -7,8 +7,8 @@
 //
 
 #import "Player.h"
-
 #import "Stock.h"
+#import "JSONKit.h"
 
 @implementation Player
 
@@ -72,6 +72,48 @@
     }
 
 
+}
+
+// NOTE: Might want to use getters and setters here instead of direct
+// ivar access. But if no overrides of those setters/getters happen
+// it is only a waste of cycles
+- (NSDictionary *)serializeToDictionary {
+    
+    NSMutableDictionary *ret = [[NSMutableDictionary alloc] init];
+    
+    if(cash)
+        [ret setObject:cash forKey:@"Cash"];
+    if(name)
+        [ret setObject:name forKey:@"Name"];
+    if(rank)
+        [ret setObject:rank forKey:@"Rank"];
+
+    if(stocks)
+    {
+        NSMutableArray *serializedStocks = [[NSMutableArray alloc] init];
+        
+        for(Stock *stock in stocks)
+        {
+            if([stock isKindOfClass:[Stock class]])
+                [serializedStocks addObject:[stock serializeToDictionary]];
+        }
+        
+        [ret setObject:serializedStocks forKey:@"Stocks"];
+        [serializedStocks release];
+    }
+    
+    [ret autorelease];
+    return [[ret copy] autorelease];
+}
+
+- (NSString *)serializeToJSONString{
+    return [[self serializeToDictionary] JSONString];
+}
+
+- (NSString *)description
+{
+    return [NSString stringWithFormat:@"%@ {Cash %@, Name %@, Rank %@, Stocks %@}",
+            [super description],cash,name,rank,stocks];
 }
 
 @end

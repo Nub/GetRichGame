@@ -17,4 +17,7 @@
 + (Stock *)instanceFromDictionary:(NSDictionary *)aDictionary;
 - (void)setAttributesFromDictionary:(NSDictionary *)aDictionary;
 
+- (NSDictionary *)serializeToDictionary;
+- (NSString *)serializeToJSONString;
+
 @end

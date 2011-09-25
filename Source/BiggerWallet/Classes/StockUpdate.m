@@ -7,6 +7,7 @@
 //
 
 #import "StockUpdate.h"
+#import "JSONKit.h"
 
 @implementation StockUpdate
 
@@ -50,6 +51,32 @@
     self.date = [aDictionary objectForKey:@"date"];
     self.value = [aDictionary objectForKey:@"value"];
 
+}
+
+// NOTE: Might want to use getters and setters here instead of direct
+// ivar access. But if no overrides of those setters/getters happen
+// it is only a waste of cycles
+- (NSDictionary *)serializeToDictionary {
+    
+    NSMutableDictionary *ret = [[NSMutableDictionary alloc] init];
+    
+    if(date)
+        [ret setObject:date forKey:@"date"];
+    if(value)
+        [ret setObject:value forKey:@"value"];
+    
+    [ret autorelease];
+    return [[ret copy] autorelease];
+}
+
+- (NSString *)serializeToJSONString{
+    return [[self serializeToDictionary] JSONString];
+}
+
+- (NSString *)description
+{
+    return [NSString stringWithFormat:@"%@ {date %@, value %@}",
+            [super description],date,value];
 }
 
 @end

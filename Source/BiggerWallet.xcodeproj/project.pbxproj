@@ -20,6 +20,7 @@
 		4B440451142D4C1D00DCBD50 /* Stock.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B44044B142D4C1D00DCBD50 /* Stock.m */; };
 		4B440452142D4C1D00DCBD50 /* StockPurchase.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B44044D142D4C1D00DCBD50 /* StockPurchase.m */; };
 		4B440453142D4C1D00DCBD50 /* StockUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B44044F142D4C1D00DCBD50 /* StockUpdate.m */; };
+		80EF2C10142F61C000EBEFE9 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 80EF2C0F142F61C000EBEFE9 /* JSONKit.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,8 @@
 		4B44044D142D4C1D00DCBD50 /* StockPurchase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StockPurchase.m; sourceTree = "<group>"; };
 		4B44044E142D4C1D00DCBD50 /* StockUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StockUpdate.h; sourceTree = "<group>"; };
 		4B44044F142D4C1D00DCBD50 /* StockUpdate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StockUpdate.m; sourceTree = "<group>"; };
+		80EF2C0E142F61BF00EBEFE9 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
+		80EF2C0F142F61C000EBEFE9 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +125,8 @@
 		807E6346142D531F00916E6B /* Content */ = {
 			isa = PBXGroup;
 			children = (
+				80EF2C0E142F61BF00EBEFE9 /* JSONKit.h */,
+				80EF2C0F142F61C000EBEFE9 /* JSONKit.m */,
 				4B440448142D4C1D00DCBD50 /* Player.h */,
 				4B440449142D4C1D00DCBD50 /* Player.m */,
 				4B44044A142D4C1D00DCBD50 /* Stock.h */,
@@ -215,6 +220,7 @@
 				4B440451142D4C1D00DCBD50 /* Stock.m in Sources */,
 				4B440452142D4C1D00DCBD50 /* StockPurchase.m in Sources */,
 				4B440453142D4C1D00DCBD50 /* StockUpdate.m in Sources */,
+				80EF2C10142F61C000EBEFE9 /* JSONKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
