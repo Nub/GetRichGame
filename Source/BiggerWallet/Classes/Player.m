@@ -3,12 +3,12 @@
 //  
 //
 //  Created by Zachry Thayer on 9/23/11.
-//  Copyright 2011 Penguins With Mustaches. All rights reserved.
+//  Copyright 2011 Zachry Thayer. All rights reserved.
 //  Copyright 2011 Jos Kuijpers. All rights reserved.
 //
 
 #import "Player.h"
-#import "Stock.h"
+#import "PlayerStock.h"
 #import "JSONKit.h"
 
 @implementation Player

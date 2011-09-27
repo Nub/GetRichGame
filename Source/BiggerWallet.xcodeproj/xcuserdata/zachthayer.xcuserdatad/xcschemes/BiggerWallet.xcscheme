@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   version = "1.3">
+   version = "1.7">
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
@@ -26,6 +26,24 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.GDB"
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
+      <PostActions>
+         <ExecutionAction
+            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
+            <ActionContent
+               title = "Run Script"
+               scriptText = "&#10;echo $(PRODUCT_NAME)&#10;&#10;#curl http://testflightapp.com/api/builds.json &#10;#-F file=@testflightapp.ipa &#10;#-F api_token=&apos;your_api_token&apos; &#10;#-F team_token=&apos;your_team_token&apos; &#10;#-F notes=&apos;This build was uploaded via the upload API&apos; &#10;#-F notify=True &#10;#-F distribution_lists=&apos;Internal, QA&apos;&#10;&#10;&#10;&#10;&#10;">
+               <EnvironmentBuildable>
+                  <BuildableReference
+                     BuildableIdentifier = "primary"
+                     BlueprintIdentifier = "4B440422142D4BE100DCBD50"
+                     BuildableName = "BiggerWallet.app"
+                     BlueprintName = "BiggerWallet"
+                     ReferencedContainer = "container:BiggerWallet.xcodeproj">
+                  </BuildableReference>
+               </EnvironmentBuildable>
+            </ActionContent>
+         </ExecutionAction>
+      </PostActions>
       <Testables>
       </Testables>
    </TestAction>
@@ -68,5 +86,23 @@
    <ArchiveAction
       buildConfiguration = "Release"
       revealArchiveInOrganizer = "YES">
+      <PostActions>
+         <ExecutionAction
+            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
+            <ActionContent
+               title = "Run Script"
+               scriptText = "&#10;echo $(PRODUCT_NAME)&#10;&#10;#curl http://testflightapp.com/api/builds.json &#10;#-F file=@testflightapp.ipa &#10;#-F api_token=&apos;your_api_token&apos; &#10;#-F team_token=&apos;your_team_token&apos; &#10;#-F notes=&apos;This build was uploaded via the upload API&apos; &#10;#-F notify=True &#10;#-F distribution_lists=&apos;Internal, QA&apos;&#10;&#10;&#10;&#10;&#10;">
+               <EnvironmentBuildable>
+                  <BuildableReference
+                     BuildableIdentifier = "primary"
+                     BlueprintIdentifier = "4B440422142D4BE100DCBD50"
+                     BuildableName = "BiggerWallet.app"
+                     BlueprintName = "BiggerWallet"
+                     ReferencedContainer = "container:BiggerWallet.xcodeproj">
+                  </BuildableReference>
+               </EnvironmentBuildable>
+            </ActionContent>
+         </ExecutionAction>
+      </PostActions>
    </ArchiveAction>
 </Scheme>
