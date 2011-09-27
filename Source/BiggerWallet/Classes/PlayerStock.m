@@ -1,13 +1,13 @@
 //
-//  Stock.m
+//  PlayerStock.m
 //  
 //
 //  Created by Zachry Thayer on 9/23/11.
-//  Copyright 2011 Penguins With Mustaches. All rights reserved.
+//  Copyright Zachry Thayer. All rights reserved.
 //  Copyright 2011 Jos Kuijpers. All rights reserved.
 //
 
-#import "Stock.h"
+#import "PlayerStock.h"
 #import "StockPurchase.h"
 #import "JSONKit.h"
 

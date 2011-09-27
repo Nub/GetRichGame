@@ -1,9 +1,9 @@
 //
-//  Stock.h
+//  PlayerStock.h
 //  
 //
 //  Created by Zachry Thayer on 9/23/11.
-//  Copyright 2011 Penguins With Mustaches. All rights reserved.
+//  Copyright 2011 Zachry Thayer. All rights reserved.
 //  Copyright 2011 Jos Kuijpers. All rights reserved.
 //
 
