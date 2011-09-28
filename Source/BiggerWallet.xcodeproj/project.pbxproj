@@ -25,6 +25,9 @@
 		80EF2C12142F682600EBEFE9 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80EF2C11142F682600EBEFE9 /* GameKit.framework */; };
 		80EF2C14142F682D00EBEFE9 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80EF2C13142F682D00EBEFE9 /* iAd.framework */; };
 		80EF2C16142F684300EBEFE9 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80EF2C15142F684300EBEFE9 /* StoreKit.framework */; };
+		80EF2C1D1433696800EBEFE9 /* ContentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 80EF2C1C1433696800EBEFE9 /* ContentManager.m */; };
+		80EF2C2114336A5700EBEFE9 /* ContentPurchaser.m in Sources */ = {isa = PBXBuildFile; fileRef = 80EF2C2014336A5700EBEFE9 /* ContentPurchaser.m */; };
+		80EF2C2414336A6A00EBEFE9 /* ContentPublisher.m in Sources */ = {isa = PBXBuildFile; fileRef = 80EF2C2314336A6A00EBEFE9 /* ContentPublisher.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +60,12 @@
 		80EF2C11142F682600EBEFE9 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		80EF2C13142F682D00EBEFE9 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		80EF2C15142F684300EBEFE9 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		80EF2C1B1433696800EBEFE9 /* ContentManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentManager.h; sourceTree = "<group>"; };
+		80EF2C1C1433696800EBEFE9 /* ContentManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentManager.m; sourceTree = "<group>"; };
+		80EF2C1F14336A5700EBEFE9 /* ContentPurchaser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentPurchaser.h; sourceTree = "<group>"; };
+		80EF2C2014336A5700EBEFE9 /* ContentPurchaser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentPurchaser.m; sourceTree = "<group>"; };
+		80EF2C2214336A6A00EBEFE9 /* ContentPublisher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentPublisher.h; sourceTree = "<group>"; };
+		80EF2C2314336A6A00EBEFE9 /* ContentPublisher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentPublisher.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +161,12 @@
 				4B44044F142D4C1D00DCBD50 /* StockUpdate.m */,
 				4B4404691430566300DCBD50 /* ContentProvider.h */,
 				4B44046A1430566300DCBD50 /* ContentProvider.m */,
+				80EF2C1B1433696800EBEFE9 /* ContentManager.h */,
+				80EF2C1C1433696800EBEFE9 /* ContentManager.m */,
+				80EF2C1F14336A5700EBEFE9 /* ContentPurchaser.h */,
+				80EF2C2014336A5700EBEFE9 /* ContentPurchaser.m */,
+				80EF2C2214336A6A00EBEFE9 /* ContentPublisher.h */,
+				80EF2C2314336A6A00EBEFE9 /* ContentPublisher.m */,
 			);
 			name = Content;
 			sourceTree = "<group>";
@@ -239,6 +254,9 @@
 				4B440453142D4C1D00DCBD50 /* StockUpdate.m in Sources */,
 				80EF2C10142F61C000EBEFE9 /* JSONKit.m in Sources */,
 				4B44046B1430566300DCBD50 /* ContentProvider.m in Sources */,
+				80EF2C1D1433696800EBEFE9 /* ContentManager.m in Sources */,
+				80EF2C2114336A5700EBEFE9 /* ContentPurchaser.m in Sources */,
+				80EF2C2414336A6A00EBEFE9 /* ContentPublisher.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

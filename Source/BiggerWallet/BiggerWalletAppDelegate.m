@@ -10,6 +10,8 @@
 
 #import "BiggerWalletViewController.h"
 
+#import "ContentManager.h"
+
 @implementation BiggerWalletAppDelegate
 
 @synthesize window = _window;
@@ -18,7 +20,11 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-     
+    
+    ContentManager *manager = [[ContentManager alloc] init];
+    
+    [manager.provider ];
+    
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
     return YES;

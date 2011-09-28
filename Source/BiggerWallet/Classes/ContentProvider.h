@@ -3,7 +3,8 @@
 //  BiggerWallet
 //
 //  Created by Zachry Thayer on 9/25/11.
-//  Copyright 2011 Penguins With Mustaches. All rights reserved.
+//  Copyright 2011 Zachry Thayer. All rights reserved.
+//  Copyright 2011 Jos Kuijpers. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -17,7 +18,8 @@
     
 }
 
-
 @property (nonatomic, retain) Player *player;
+
+- (NSArray *)searchForStocksNamed:(NSString *)name;
 
 @end
