@@ -20,7 +20,8 @@
 
 @property (nonatomic, retain) Player *player;
 
-- (NSArray *)searchForStocksNamed:(NSString *)name;
+- (void)searchForStocksNamed:(NSString *)name 
+                  completion:(void(^)(NSArray *data))block;
 
 
 @end
