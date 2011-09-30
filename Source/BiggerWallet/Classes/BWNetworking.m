@@ -107,7 +107,9 @@
     else
     {
         if(block)
-            block(collection,param,nil);
+            block(collection,param,[NSError errorWithDomain:@"BWNetworkingDomain"
+                                                       code:1 // can't connect
+                                                   userInfo:nil]);
     }
 }
 
@@ -116,7 +118,42 @@
               parameters:(NSArray *)param
               completion:(BWCompletionBlock)block
 {
-
+    NSURL *url = [self urlForCollection:collection
+                                  param:param];
+    
+    NSString *wrapper = @"data=";
+    NSMutableData *rdata = [NSMutableData dataWithBytes:[wrapper UTF8String]
+                                                 length:[wrapper lengthOfBytesUsingEncoding:NSUTF8StringEncoding]];
+    [rdata appendData:data];
+    
+    // Create the request
+    NSMutableURLRequest *req = [NSMutableURLRequest requestWithURL:url];
+    [req setHTTPMethod:@"POST"];
+    [req setHTTPBody:rdata];
+    [req setValue:[NSString stringWithFormat:@"%d",[rdata length]] forHTTPHeaderField:@"Content-Length"];
+    
+    NSURLConnection *urlConnection = [NSURLConnection alloc];
+    urlConnection = [urlConnection initWithRequest:req
+                                          delegate:self];
+    
+    if(urlConnection)
+    {
+        BWConnection *conn = [BWConnection alloc];
+        conn = [conn initWithCollection:collection 
+                                  param:param 
+                             connection:urlConnection 
+                             completion:block];
+        
+        [connections setObject:conn forKey:[self keyForConnection:urlConnection]];
+        [conn release];
+    }
+    else
+    {
+        if(block)
+            block(collection,param,[NSError errorWithDomain:@"BWNetworkingDomain"
+                                                       code:1 // can't connect
+                                                   userInfo:nil]);
+    }
 }
 
 - (void)putToCollection:(NSString *)collection
@@ -124,7 +161,37 @@
              parameters:(NSArray *)param
              completion:(BWCompletionBlock)block
 {
-
+    NSURL *url = [self urlForCollection:collection
+                                  param:param];
+    
+    // Create the request
+    NSMutableURLRequest *req = [NSMutableURLRequest requestWithURL:url];
+    [req setHTTPMethod:@"PUT"];
+    [req setHTTPBody:data];
+    [req setValue:[NSString stringWithFormat:@"%d",[data length]] forHTTPHeaderField:@"Content-Length"];
+    
+    NSURLConnection *urlConnection = [NSURLConnection alloc];
+    urlConnection = [urlConnection initWithRequest:req
+                                          delegate:self];
+    
+    if(urlConnection)
+    {
+        BWConnection *conn = [BWConnection alloc];
+        conn = [conn initWithCollection:collection 
+                                  param:param 
+                             connection:urlConnection 
+                             completion:block];
+        
+        [connections setObject:conn forKey:[self keyForConnection:urlConnection]];
+        [conn release];
+    }
+    else
+    {
+        if(block)
+            block(collection,param,[NSError errorWithDomain:@"BWNetworkingDomain"
+                                                       code:1 // can't connect
+                                                   userInfo:nil]);
+    }
 }
 
 #pragma mark - Connection delegate
@@ -154,6 +221,7 @@ didReceiveResponse:(NSURLResponse *)response
         return;
     [conn didFinish];
     [connections removeObjectForKey:[self keyForConnection:connection]];
+    [connection release];
 }
 
 - (void)connection:(NSURLConnection *)connection 
@@ -166,6 +234,7 @@ didReceiveResponse:(NSURLResponse *)response
     
     // Remove and release the object. This should also dealloc the object
     [connections removeObjectForKey:[self keyForConnection:connection]];
+    [connection release];
 }
 
 @end
@@ -212,6 +281,21 @@ didReceiveResponse:(NSURLResponse *)response
 
 - (void)didFinish
 {
+    if(response && [response isKindOfClass:[NSHTTPURLResponse class]])
+    {
+        NSInteger statusCode = [(NSHTTPURLResponse *)response statusCode];
+        if(statusCode != 200 /*OK*/
+           && statusCode != 201 /*CREATED*/
+           )
+        {
+            if(block)
+                block(collection,param,[NSError errorWithDomain:@"BWNetworkingDomain"
+                                                           code:statusCode
+                                                       userInfo:nil]);
+            return;
+        }
+    }
+    
     id jsonObj = [data objectFromJSONData];
     if(block)
         block(collection,param,jsonObj);
