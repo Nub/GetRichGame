@@ -1,0 +1,20 @@
+{ 
+	"Name":"TestPlayer",        
+	            
+	"Cash":1983502,
+	        
+	"Stocks":{
+	    "AAPL":[
+			{
+				"Shares":100,
+				"Price":230.45,
+				"Date":"9/20/2011 6:00pm"
+			},
+			{
+				"Shares":50,
+				"Price":246.98,
+				"Date":"9/26/2011 2:00pm"
+			}
+		]
+	}
+}

@@ -7,15 +7,19 @@
 //  Copyright 2011 Jos Kuijpers. All rights reserved.
 //
 
-@class StockUpdate;
-
 @interface StockPurchase : NSObject {
     NSNumber *shares;
-    StockUpdate *stockUpdate;
+    NSNumber *price;
+    NSString *date;
 }
 
-@property (nonatomic, copy) NSNumber *shares;
-@property (nonatomic, retain) StockUpdate *stockUpdate;
+#define kStockUpdateSharesKey   @"Shares"
+#define kStockUpdatePriceKey   @"Price"
+#define kStockUpdatsDateKey     @"Date"
+
+@property (nonatomic, retain) NSNumber *shares;
+@property (nonatomic, retain) NSNumber *price;
+@property (nonatomic, retain) NSString *date;
 
 // Parsing
 + (StockPurchase *)instanceFromDictionary:(NSDictionary *)aDictionary;

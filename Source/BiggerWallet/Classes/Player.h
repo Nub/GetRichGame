@@ -10,14 +10,16 @@
 @interface Player : NSObject {
     NSNumber *cash;
     NSString *name;
-    NSNumber *rank;
-    NSArray *stocks;
+    NSMutableDictionary *stocks;
 }
+
+#define kPlayerCashKey      @"Cash"
+#define kPlayerNameKey      @"Name"
+#define kPlayerStocksKey    @"Stocks"
 
 @property (nonatomic, copy) NSNumber *cash;
 @property (nonatomic, copy) NSString *name;
-@property (nonatomic, copy) NSNumber *rank;
-@property (nonatomic, copy) NSArray *stocks;
+@property (nonatomic, retain) NSMutableDictionary *stocks;
 
 // Parsing
 + (Player *)instanceFromDictionary:(NSDictionary *)aDictionary;
@@ -27,18 +29,5 @@
 // Serializing
 - (NSDictionary *)serializeToDictionary;
 - (NSString *)serializeToJSONString;
-
-// Content Provider
-- (NSNumber *)netWorth;
-- (NSNumber *)netWorthOfStocks;
-- (NSNumber *)netWorthOfStock:(NSString *)stock;
-- (NSNumber *)netPurchasePriceOfStock:(NSString *)stock;
-- (NSNumber *)numberOfShareInStock:(NSString *)stock;
-
-// Content Publisher
-- (BOOL)purchaseSharesInStock:(NSString *)stock amount:(NSNumber *)amount;
-- (BOOL)sellSharesInStock:(NSString *)stock amount:(NSNumber *)amount;
-- (BOOL)purchaseMoneyAmount:(NSNumber *)amount;
-- (void)synchronize;
 
 @end

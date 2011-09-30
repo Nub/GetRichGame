@@ -8,13 +8,13 @@
 //
 
 #import "StockPurchase.h"
-#import "StockUpdate.h"
 #import "JSONKit.h"
 
 @implementation StockPurchase
 
 @synthesize shares = shares;
-@synthesize stockUpdate = stockUpdate;
+@synthesize price = price;
+@synthesize date = date;
 
 - (id)init
 {
@@ -29,7 +29,8 @@
 
 - (void)dealloc {
     [shares release], shares = nil;
-    [stockUpdate release], stockUpdate = nil;
+    [price release], price = nil;
+    [date release], date = nil;
 
     [super dealloc];
 
@@ -52,8 +53,9 @@
         return;
     }
 
-    self.shares = [aDictionary objectForKey:@"Shares"];
-    self.stockUpdate = [StockUpdate instanceFromDictionary:[aDictionary objectForKey:@"StockUpdate"]];
+    self.shares = [aDictionary objectForKey:kStockUpdateSharesKey];
+    self.price = [aDictionary objectForKey:kStockUpdatePriceKey];
+    self.date   = [aDictionary objectForKey:kStockUpdatsDateKey];
 
 }
 
@@ -71,9 +73,11 @@
     NSMutableDictionary *ret = [[NSMutableDictionary alloc] init];
     
     if(shares)
-        [ret setObject:shares forKey:@"Shares"];
-    if(stockUpdate)
-        [ret setObject:[stockUpdate serializeToDictionary] forKey:@"StockUpdate"];
+        [ret setObject:shares forKey:kStockUpdateSharesKey];
+    if(price)
+        [ret setObject:price forKey:kStockUpdatePriceKey];
+    if(date)
+        [ret setObject:date forKey:kStockUpdatsDateKey];
     
     [ret autorelease];
     return [[ret copy] autorelease];
@@ -85,8 +89,8 @@
 
 - (NSString *)description
 {
-    return [NSString stringWithFormat:@"%@ {Shares %@, StockUpdate %@}",
-            [super description],shares,stockUpdate];
+    return [NSString stringWithFormat:@"%@ {Shares: %@, Price: %@, Date: %@}",
+            [super description],shares, price, date];
 }
 
 @end

@@ -20,4 +20,25 @@
     return self;
 }
 
+
+#pragma mark - Player Publisher
+
+- (BOOL)purchaseSharesInStock:(NSString *)stock amount:(NSNumber *)amount {
+    return NO;
+}
+
+- (BOOL)sellSharesInStock:(NSString *)stock amount:(NSNumber *)amount {
+    return NO;
+}
+
+- (BOOL)purchaseMoneyAmount:(NSNumber *)amount {
+    return NO;
+}
+
+- (void)synchronize {
+    return;
+}
+
+
+
 @end

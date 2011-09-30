@@ -22,4 +22,5 @@
 
 - (NSArray *)searchForStocksNamed:(NSString *)name;
 
+
 @end

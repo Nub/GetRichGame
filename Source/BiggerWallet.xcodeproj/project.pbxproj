@@ -17,10 +17,10 @@
 		4B44043E142D4BE100DCBD50 /* BiggerWalletViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B44043D142D4BE100DCBD50 /* BiggerWalletViewController.m */; };
 		4B440441142D4BE100DCBD50 /* BiggerWalletViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B44043F142D4BE100DCBD50 /* BiggerWalletViewController.xib */; };
 		4B440450142D4C1D00DCBD50 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B440449142D4C1D00DCBD50 /* Player.m */; };
-		4B440451142D4C1D00DCBD50 /* PlayerStock.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B44044B142D4C1D00DCBD50 /* PlayerStock.m */; };
 		4B440452142D4C1D00DCBD50 /* StockPurchase.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B44044D142D4C1D00DCBD50 /* StockPurchase.m */; };
 		4B440453142D4C1D00DCBD50 /* StockUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B44044F142D4C1D00DCBD50 /* StockUpdate.m */; };
 		4B44046B1430566300DCBD50 /* ContentProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B44046A1430566300DCBD50 /* ContentProvider.m */; };
+		4B6F81091435BC480099CCB4 /* testPlayer.json in Resources */ = {isa = PBXBuildFile; fileRef = 4B6F81081435BC480099CCB4 /* testPlayer.json */; };
 		80EF2C10142F61C000EBEFE9 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 80EF2C0F142F61C000EBEFE9 /* JSONKit.m */; };
 		80EF2C12142F682600EBEFE9 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80EF2C11142F682600EBEFE9 /* GameKit.framework */; };
 		80EF2C14142F682D00EBEFE9 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80EF2C13142F682D00EBEFE9 /* iAd.framework */; };
@@ -47,14 +47,13 @@
 		4B440440142D4BE100DCBD50 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/BiggerWalletViewController.xib; sourceTree = "<group>"; };
 		4B440448142D4C1D00DCBD50 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
 		4B440449142D4C1D00DCBD50 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
-		4B44044A142D4C1D00DCBD50 /* PlayerStock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerStock.h; sourceTree = "<group>"; };
-		4B44044B142D4C1D00DCBD50 /* PlayerStock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerStock.m; sourceTree = "<group>"; };
 		4B44044C142D4C1D00DCBD50 /* StockPurchase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StockPurchase.h; sourceTree = "<group>"; };
 		4B44044D142D4C1D00DCBD50 /* StockPurchase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StockPurchase.m; sourceTree = "<group>"; };
 		4B44044E142D4C1D00DCBD50 /* StockUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StockUpdate.h; sourceTree = "<group>"; };
 		4B44044F142D4C1D00DCBD50 /* StockUpdate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StockUpdate.m; sourceTree = "<group>"; };
 		4B4404691430566300DCBD50 /* ContentProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentProvider.h; sourceTree = "<group>"; };
 		4B44046A1430566300DCBD50 /* ContentProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentProvider.m; sourceTree = "<group>"; };
+		4B6F81081435BC480099CCB4 /* testPlayer.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testPlayer.json; sourceTree = "<group>"; };
 		80EF2C0E142F61BF00EBEFE9 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
 		80EF2C0F142F61C000EBEFE9 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 		80EF2C11142F682600EBEFE9 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
@@ -118,6 +117,7 @@
 		4B44042D142D4BE100DCBD50 /* BiggerWallet */ = {
 			isa = PBXGroup;
 			children = (
+				4B6F81071435BC480099CCB4 /* Resources */,
 				4B440447142D4C1D00DCBD50 /* Classes */,
 				4B440436142D4BE100DCBD50 /* BiggerWalletAppDelegate.h */,
 				4B440437142D4BE100DCBD50 /* BiggerWalletAppDelegate.m */,
@@ -146,6 +146,14 @@
 			path = Classes;
 			sourceTree = "<group>";
 		};
+		4B6F81071435BC480099CCB4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4B6F81081435BC480099CCB4 /* testPlayer.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		807E6346142D531F00916E6B /* Content */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,8 +161,6 @@
 				80EF2C0F142F61C000EBEFE9 /* JSONKit.m */,
 				4B440448142D4C1D00DCBD50 /* Player.h */,
 				4B440449142D4C1D00DCBD50 /* Player.m */,
-				4B44044A142D4C1D00DCBD50 /* PlayerStock.h */,
-				4B44044B142D4C1D00DCBD50 /* PlayerStock.m */,
 				4B44044C142D4C1D00DCBD50 /* StockPurchase.h */,
 				4B44044D142D4C1D00DCBD50 /* StockPurchase.m */,
 				4B44044E142D4C1D00DCBD50 /* StockUpdate.h */,
@@ -235,6 +241,7 @@
 				4B440432142D4BE100DCBD50 /* InfoPlist.strings in Resources */,
 				4B44043B142D4BE100DCBD50 /* MainWindow.xib in Resources */,
 				4B440441142D4BE100DCBD50 /* BiggerWalletViewController.xib in Resources */,
+				4B6F81091435BC480099CCB4 /* testPlayer.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,7 +256,6 @@
 				4B440438142D4BE100DCBD50 /* BiggerWalletAppDelegate.m in Sources */,
 				4B44043E142D4BE100DCBD50 /* BiggerWalletViewController.m in Sources */,
 				4B440450142D4C1D00DCBD50 /* Player.m in Sources */,
-				4B440451142D4C1D00DCBD50 /* PlayerStock.m in Sources */,
 				4B440452142D4C1D00DCBD50 /* StockPurchase.m in Sources */,
 				4B440453142D4C1D00DCBD50 /* StockUpdate.m in Sources */,
 				80EF2C10142F61C000EBEFE9 /* JSONKit.m in Sources */,

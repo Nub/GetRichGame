@@ -33,6 +33,14 @@
             
         }else{// No Cache exists
             
+            NSString *testPlayer = [[NSBundle mainBundle] pathForResource:@"testPlayer" ofType:@"json"];
+            
+            NSString *jsonString = [NSString stringWithContentsOfFile:testPlayer encoding:NSUTF8StringEncoding error:nil];
+            
+            [self.player setAttributesFromDictionary:[jsonString objectFromJSONString]];
+            
+            NSLog(@"%@", self.player);
+            
         }
         
     }
@@ -47,6 +55,10 @@
     [super dealloc];
     
 }
+
+#pragma mark - Player Provider
+
+#pragma mark - Stock Provider
 
 - (NSArray *)searchForStocksNamed:(NSString *)name
 {    

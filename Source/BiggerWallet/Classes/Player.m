@@ -8,14 +8,13 @@
 //
 
 #import "Player.h"
-#import "PlayerStock.h"
+#import "StockPurchase.h"
 #import "JSONKit.h"
 
 @implementation Player
 
 @synthesize cash = cash;
 @synthesize name = name;
-@synthesize rank = rank;
 @synthesize stocks = stocks;
 
 - (id)init
@@ -32,7 +31,6 @@
 - (void)dealloc {
     [cash release], cash = nil;
     [name release], name = nil;
-    [rank release], rank = nil;
     [stocks release], stocks = nil;
 
     [super dealloc];
@@ -55,21 +53,45 @@
         return;
     }
 
-    self.cash = [aDictionary objectForKey:@"Cash"];
-    self.name = [aDictionary objectForKey:@"Name"];
-    self.rank = [aDictionary objectForKey:@"Rank"];
+    self.cash = [aDictionary objectForKey:kPlayerCashKey];
+    self.name = [aDictionary objectForKey:kPlayerNameKey];
 
-    NSArray *receivedStocks = [aDictionary objectForKey:@"Stocks"];
-    if ([receivedStocks isKindOfClass:[NSArray class]]) {
+    self.stocks = [[NSMutableDictionary alloc] init];
 
-        NSMutableArray *parsedStocks = [NSMutableArray arrayWithCapacity:[receivedStocks count]];
-        for (NSDictionary *item in receivedStocks) {
-            if ([item isKindOfClass:[NSDictionary class]]) {
-                [parsedStocks addObject:[Stock instanceFromDictionary:item]];
+    
+    NSDictionary *receivedStocks = [aDictionary objectForKey:kPlayerStocksKey];
+    if ([receivedStocks isKindOfClass:[NSDictionary class]]) {
+        
+        for (NSString *key in receivedStocks) {
+            
+            NSDictionary *item = [receivedStocks objectForKey:key];
+            
+            if ([item isKindOfClass:[NSDictionary class]]) {//if its a single purchase or old data set update to array
+                
+                NSArray *stockPurchases = [NSArray arrayWithObject:[StockPurchase instanceFromDictionary:item]]; // Multiple Purchases per stock name
+                
+                [self.stocks setObject:stockPurchases forKey:key];
+                
+                [stockPurchases release];
+                
+            }else if([item isKindOfClass:[NSArray class]]){// Array of purchases
+                
+                NSMutableArray *stockPurchases = [NSMutableArray array];
+                
+                for (NSDictionary *purchase in item) {
+                    
+                    [stockPurchases addObject:[StockPurchase instanceFromDictionary:purchase]];
+                    
+                }
+                
+                [self.stocks setObject:stockPurchases forKey:key];
+                
+                [stockPurchases release];
+                
             }
+            
+            
         }
-
-        self.stocks = parsedStocks;
 
     }
 
@@ -90,24 +112,36 @@
     NSMutableDictionary *ret = [[NSMutableDictionary alloc] init];
     
     if(cash)
-        [ret setObject:cash forKey:@"Cash"];
+        [ret setObject:cash forKey:kPlayerCashKey];
     if(name)
-        [ret setObject:name forKey:@"Name"];
-    if(rank)
-        [ret setObject:rank forKey:@"Rank"];
+        [ret setObject:name forKey:kPlayerNameKey];
 
     if(stocks)
     {
-        NSMutableArray *serializedStocks = [[NSMutableArray alloc] init];
+        NSMutableDictionary *serialStocks = [NSMutableDictionary dictionary];
         
-        for(Stock *stock in stocks)
-        {
-            if([stock isKindOfClass:[Stock class]])
-                [serializedStocks addObject:[stock serializeToDictionary]];
-        }
+        for (NSString *key in stocks) {
+         
+            NSMutableArray *serialPurchases = [NSMutableArray array];
+            
+            NSArray *item = [stocks objectForKey:key];
+            if ([item isKindOfClass:[NSArray class]]) {
+                
+                for (StockPurchase *purchase in item) {
+                    
+                    NSDictionary *serialPurchase = [purchase serializeToDictionary];
+                    [serialPurchases addObject:serialPurchase];
+                    
+                }//purchase in item
+                
+                
+            }//if array
+            
+            [serialStocks setObject:serialPurchases forKey:key];
+            
+        }//ket in stocks
         
-        [ret setObject:serializedStocks forKey:@"Stocks"];
-        [serializedStocks release];
+        [ret setObject:serialStocks forKey:kPlayerStocksKey];
     }
     
     [ret autorelease];
@@ -120,82 +154,8 @@
 
 - (NSString *)description
 {
-    return [NSString stringWithFormat:@"%@ {Cash %@, Name %@, Rank %@, Stocks %@}",
-            [super description],cash,name,rank,stocks];
-}
-
-#pragma mark - Content Provider
-
-- (NSNumber *)netWorth {
-    return nil;
-}
-
-- (NSNumber *)netWorthOfStocks {
-    return nil;
-}
-
-- (Stock *)_stockObjectForName:(NSString *)stock
-{
-    if(stock == nil || stocks == nil)
-        return nil;
-    
-    for(Stock *st in stocks)
-    {
-        if([st isKindOfClass:[Stock class]])
-        {
-            if([st.name isEqualToString:stock])
-                return [[st retain] autorelease];
-        }
-    }
-    
-    return nil;
-}
-
-- (NSNumber *)netWorthOfStock:(NSString *)stock {
-    
-    Stock *theStock = [self _stockObjectForName:stock];
-    if(theStock == nil)
-        return nil;
-    
-    
-    return nil;
-}
-
-- (NSNumber *)netPurchasePriceOfStock:(NSString *)stock {
-    
-    Stock *theStock = [self _stockObjectForName:stock];
-    if(theStock == nil)
-        return nil;
-    
-    
-    return nil;
-}
-
-- (NSNumber *)numberOfShareInStock:(NSString *)stock {
-    
-    Stock *theStock = [self _stockObjectForName:stock];
-    if(theStock == nil)
-        return nil;
-    
-    return nil;
-}
-
-#pragma mark - Content Publisher
-
-- (BOOL)purchaseSharesInStock:(NSString *)stock amount:(NSNumber *)amount {
-    return NO;
-}
-
-- (BOOL)sellSharesInStock:(NSString *)stock amount:(NSNumber *)amount {
-    return NO;
-}
-
-- (BOOL)purchaseMoneyAmount:(NSNumber *)amount {
-    return NO;
-}
-
-- (void)synchronize {
-    return;
+    return [NSString stringWithFormat:@"%@ {Cash %@, Name %@, Stocks %@}",
+            [super description],cash,name,stocks];
 }
 
 @end
