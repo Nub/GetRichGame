@@ -4,13 +4,10 @@
 //
 //  Created by Zachry Thayer on 9/25/11.
 //  Copyright 2011 Zachry Thayer. All rights reserved.
-//  Copyright 2011 Jos Kuijpers. All rights reserved.
 //
 
 #import "ContentProvider.h"
 #import "JSONKit.h"
-#import "ContentManager.h"
-#import "BWNetworking.h"
 
 @implementation ContentProvider
 
@@ -34,13 +31,16 @@
             
             [self.player setAttributesFromDictionary:[jsonString objectFromJSONString]];
             
-        } else {// No Cache exists
+        }else{// No Cache exists
             
             NSString *testPlayer = [[NSBundle mainBundle] pathForResource:@"testPlayer" ofType:@"json"];
             
             NSString *jsonString = [NSString stringWithContentsOfFile:testPlayer encoding:NSUTF8StringEncoding error:nil];
             
             [self.player setAttributesFromDictionary:[jsonString objectFromJSONString]];
+            
+            NSLog(@"%@", self.player);
+            
         }
         
     }
@@ -60,21 +60,9 @@
 
 #pragma mark - Stock Provider
 
-- (void)searchForStocksNamed:(NSString *)name 
-                  completion:(void(^)(NSArray *data))block
+- (NSArray *)searchForStocksNamed:(NSString *)name
 {    
-    BWNetworking *net = [[ContentManager singleton] networking];
-    
-    void (^myBlock)(NSArray *data) = [block copy];
-    
-    [net getFromCollection:@"stock"
-                parameters:[NSArray arrayWithObjects:@"find",name,nil]
-                completion:^(NSString *collection, NSArray *param, id ret) {
-                    if(myBlock)
-                        myBlock(ret);
-                    [myBlock release];
-                }];
-    
+    return nil;
 }
 
 @end

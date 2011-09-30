@@ -8,24 +8,22 @@
 
 #import <Foundation/Foundation.h>
 
-@class ContentProvider;
-@class ContentPublisher;
-@class ContentPurchaser;
-@class BWNetworking;
+#import "ContentProvider.h"
+#import "ContentPublisher.h"
+#import "ContentPurchaser.h"
 
 @interface ContentManager : NSObject
 {
     ContentProvider *provider;
     ContentPublisher *publisher;
     ContentPurchaser *purchaser;
-    BWNetworking *networking;
 }
 
 @property (readonly) ContentProvider *provider;
 @property (readonly) ContentPublisher *publisher;
 @property (readonly) ContentPurchaser *purchaser;
-@property (readonly) BWNetworking *networking;
 
-+ (ContentManager *)singleton;
+// This must be a singleton
+// -(ContentManager *)singleton;
 
 @end
