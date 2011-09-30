@@ -28,6 +28,7 @@
 		80EF2C1D1433696800EBEFE9 /* ContentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 80EF2C1C1433696800EBEFE9 /* ContentManager.m */; };
 		80EF2C2114336A5700EBEFE9 /* ContentPurchaser.m in Sources */ = {isa = PBXBuildFile; fileRef = 80EF2C2014336A5700EBEFE9 /* ContentPurchaser.m */; };
 		80EF2C2414336A6A00EBEFE9 /* ContentPublisher.m in Sources */ = {isa = PBXBuildFile; fileRef = 80EF2C2314336A6A00EBEFE9 /* ContentPublisher.m */; };
+		80EF2C391436292100EBEFE9 /* BWNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 80EF2C381436292100EBEFE9 /* BWNetworking.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +66,8 @@
 		80EF2C2014336A5700EBEFE9 /* ContentPurchaser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentPurchaser.m; sourceTree = "<group>"; };
 		80EF2C2214336A6A00EBEFE9 /* ContentPublisher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentPublisher.h; sourceTree = "<group>"; };
 		80EF2C2314336A6A00EBEFE9 /* ContentPublisher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentPublisher.m; sourceTree = "<group>"; };
+		80EF2C371436292100EBEFE9 /* BWNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; path = BWNetworking.h; sourceTree = "<group>"; };
+		80EF2C381436292100EBEFE9 /* BWNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWNetworking.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +160,7 @@
 		807E6346142D531F00916E6B /* Content */ = {
 			isa = PBXGroup;
 			children = (
+				80EF2C351436289200EBEFE9 /* Networking */,
 				80EF2C0E142F61BF00EBEFE9 /* JSONKit.h */,
 				80EF2C0F142F61C000EBEFE9 /* JSONKit.m */,
 				4B440448142D4C1D00DCBD50 /* Player.h */,
@@ -186,6 +190,15 @@
 				4B44043F142D4BE100DCBD50 /* BiggerWalletViewController.xib */,
 			);
 			name = UI;
+			sourceTree = "<group>";
+		};
+		80EF2C351436289200EBEFE9 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				80EF2C371436292100EBEFE9 /* BWNetworking.h */,
+				80EF2C381436292100EBEFE9 /* BWNetworking.m */,
+			);
+			name = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,6 +276,7 @@
 				80EF2C1D1433696800EBEFE9 /* ContentManager.m in Sources */,
 				80EF2C2114336A5700EBEFE9 /* ContentPurchaser.m in Sources */,
 				80EF2C2414336A6A00EBEFE9 /* ContentPublisher.m in Sources */,
+				80EF2C391436292100EBEFE9 /* BWNetworking.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

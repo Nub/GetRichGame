@@ -56,7 +56,7 @@
     self.cash = [aDictionary objectForKey:kPlayerCashKey];
     self.name = [aDictionary objectForKey:kPlayerNameKey];
 
-    self.stocks = [[NSMutableDictionary alloc] init];
+    stocks = [[[NSMutableDictionary alloc] init] autorelease];
 
     
     NSDictionary *receivedStocks = [aDictionary objectForKey:kPlayerStocksKey];
@@ -72,21 +72,16 @@
                 
                 [self.stocks setObject:stockPurchases forKey:key];
                 
-                [stockPurchases release];
-                
             }else if([item isKindOfClass:[NSArray class]]){// Array of purchases
                 
                 NSMutableArray *stockPurchases = [NSMutableArray array];
                 
-                for (NSDictionary *purchase in item) {
-                    
+                for (NSDictionary *purchase in item)
+                {
                     [stockPurchases addObject:[StockPurchase instanceFromDictionary:purchase]];
-                    
                 }
                 
                 [self.stocks setObject:stockPurchases forKey:key];
-                
-                [stockPurchases release];
                 
             }
             
