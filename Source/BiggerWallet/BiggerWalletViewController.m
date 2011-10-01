@@ -9,6 +9,8 @@
 #import "BiggerWalletViewController.h"
 
 @implementation BiggerWalletViewController
+@synthesize pagedView;
+@synthesize testVCs;
 
 - (void)didReceiveMemoryWarning
 {
@@ -20,16 +22,22 @@
 
 #pragma mark - View lifecycle
 
-/*
+
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+        
+    [pagedView setDelegate:self];
+    [pagedView setDataSource:self];
+    
 }
-*/
+
 
 - (void)viewDidUnload
 {
+    [self setTestVCs:nil];
+    [self setPagedView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -40,5 +48,29 @@
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
+
+- (void)dealloc {
+    [testVCs release];
+    [pagedView release];
+    [super dealloc];
+}
+
+#pragma mark - PagedView Delegate
+
+
+#pragma mark - PagedView DataSource
+
+- (NSInteger)numberOfPagesInPagedView:(BWPagedView *)pagedView{
+        
+    return [testVCs count];
+    
+}
+
+- (UIViewController*)pagedView:(BWPagedView *)pagedView viewControllerForPage:(NSInteger)page{
+    
+    return [testVCs objectAtIndex:page];
+    
+}
+
 
 @end

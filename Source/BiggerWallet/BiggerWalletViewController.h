@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BiggerWalletViewController : UIViewController
+#import "BWPagedView.h"
+
+@interface BiggerWalletViewController : UIViewController <BWPagedViewDelegate, BWPagedViewDataSource> {
+    NSArray *testVCs;
+    BWPagedView *pagedView;
+}
+@property (nonatomic, retain) IBOutlet BWPagedView *pagedView;
+
+@property (nonatomic, retain) IBOutletCollection(UIViewController) NSArray *testVCs;
 
 @end
