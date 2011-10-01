@@ -20,7 +20,20 @@
 
 @property (nonatomic, retain) Player *player;
 
-- (NSArray *)searchForStocksNamed:(NSString *)name;
+// Player
+- (NSNumber *)playerCash;
+- (NSString *)playerName;
+- (NSNumber *)playerNetWorth;
+- (NSArray *)playerStockList;
+- (NSNumber *)netWorthOfStocks;
+- (NSNumber *)netPurchasePriceOfStockNamed:(NSString *)stock;
+- (NSNumber *)numberOfSharesInStockNamed:(NSString *)stock;
 
+// Stocks
+- (void)searchForStocksNamed:(NSString *)name 
+                  completion:(void(^)(NSArray *data))block;
+- (void)getStockNamed:(NSString *)name 
+           completion:(void(^)(NSDictionary *data))block;
+// didSplitSinceDate
 
 @end
