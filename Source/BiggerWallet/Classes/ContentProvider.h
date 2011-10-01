@@ -25,7 +25,7 @@
 - (NSString *)playerName;
 - (NSNumber *)playerNetWorth;
 - (NSArray *)playerStockList;
-- (NSNumber *)netWorthOfStocks;
+- (NSNumber *)playerStocksNetWorth;
 - (NSNumber *)netPurchasePriceOfStockNamed:(NSString *)stock;
 - (NSNumber *)numberOfSharesInStockNamed:(NSString *)stock;
 
@@ -34,6 +34,8 @@
                   completion:(void(^)(NSArray *data))block;
 - (void)getStockNamed:(NSString *)name 
            completion:(void(^)(NSDictionary *data))block;
-// didSplitSinceDate
+- (void)splitsOfStockNamed:(NSString *)name 
+         didSplitSinceDate:(NSDate *)date 
+                completion:(void(^)(NSNumber *times))block;
 
 @end

@@ -71,7 +71,9 @@
 
 - (NSNumber *)playerNetWorth
 {
-    return nil;
+    // FIXME: TODO
+    float added = 0.0;
+    return [NSNumber numberWithFloat:added];
 }
 
 - (NSArray *)playerStockList
@@ -80,7 +82,7 @@
     return [player.stocks allKeys];
 }
 
-- (NSNumber *)netWorthOfStocks
+- (NSNumber *)playerStocksNetWorth
 {
     return nil;
 }
@@ -143,6 +145,14 @@
                         myBlock(ret);
                     [myBlock release];
                 }];
+}
+
+- (void)splitsOfStockNamed:(NSString *)name 
+         didSplitSinceDate:(NSDate *)date 
+                completion:(void(^)(NSNumber *times))block
+{
+    if(block)
+        block([NSNumber numberWithInt:0]);
 }
 
 @end
