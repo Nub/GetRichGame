@@ -42,7 +42,7 @@
 				<int key="NSvFlags">274</int>
 				<object class="NSMutableArray" key="NSSubviews">
 					<bool key="EncodedWithXMLCoder">YES</bool>
-					<object class="IBUILabel" id="523173651">
+					<object class="IBUILabel" id="840358349">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{92, 29}, {137, 21}}</string>
@@ -69,14 +69,13 @@
 						<float key="IBUIMinimumFontSize">10</float>
 					</object>
 				</object>
-				<string key="NSFrame">{{0, 20}, {320, 460}}</string>
+				<string key="NSFrameSize">{320, 460}</string>
 				<reference key="NSSuperview"/>
-				<reference key="NSNextKeyView" ref="523173651"/>
+				<reference key="NSNextKeyView" ref="840358349"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
-					<int key="NSColorSpace">1</int>
-					<bytes key="NSRGB">MC4yNjU3MjIwMjgxIDAuMjU3MTc5NjgyIDEAA</bytes>
+					<int key="NSColorSpace">3</int>
+					<bytes key="NSWhite">MCAwAA</bytes>
 				</object>
-				<object class="IBUISimulatedStatusBarMetrics" key="IBUISimulatedStatusBarMetrics"/>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 			</object>
 		</object>
@@ -106,7 +105,7 @@
 						<reference key="object" ref="191373211"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="523173651"/>
+							<reference ref="840358349"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -123,7 +122,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">4</int>
-						<reference key="object" ref="523173651"/>
+						<reference key="object" ref="840358349"/>
 						<reference key="parent" ref="191373211"/>
 					</object>
 				</object>

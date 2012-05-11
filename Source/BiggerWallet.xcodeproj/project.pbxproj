@@ -30,6 +30,12 @@
 		4BFCD370143682E20037F3C7 /* BWLeaderBoardsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BFCD36E143682E20037F3C7 /* BWLeaderBoardsViewController.xib */; };
 		4BFCD374143692600037F3C7 /* BWIAPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BFCD372143692600037F3C7 /* BWIAPViewController.m */; };
 		4BFCD375143692600037F3C7 /* BWIAPViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BFCD373143692600037F3C7 /* BWIAPViewController.xib */; };
+		4BFCD3801436E68C0037F3C7 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BFCD37A1436E68C0037F3C7 /* background.png */; };
+		4BFCD3811436E68C0037F3C7 /* background@2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BFCD37B1436E68C0037F3C7 /* background@2.png */; };
+		4BFCD3821436E68C0037F3C7 /* monitors.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BFCD37C1436E68C0037F3C7 /* monitors.png */; };
+		4BFCD3831436E68C0037F3C7 /* monitors@2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BFCD37D1436E68C0037F3C7 /* monitors@2.png */; };
+		4BFCD3841436E68C0037F3C7 /* monitorsOverlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BFCD37E1436E68C0037F3C7 /* monitorsOverlay.png */; };
+		4BFCD3851436E68C0037F3C7 /* monitorsOverlay@2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BFCD37F1436E68C0037F3C7 /* monitorsOverlay@2.png */; };
 		80EF2C10142F61C000EBEFE9 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 80EF2C0F142F61C000EBEFE9 /* JSONKit.m */; };
 		80EF2C12142F682600EBEFE9 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80EF2C11142F682600EBEFE9 /* GameKit.framework */; };
 		80EF2C14142F682D00EBEFE9 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80EF2C13142F682D00EBEFE9 /* iAd.framework */; };
@@ -78,6 +84,12 @@
 		4BFCD371143692600037F3C7 /* BWIAPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWIAPViewController.h; sourceTree = "<group>"; };
 		4BFCD372143692600037F3C7 /* BWIAPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWIAPViewController.m; sourceTree = "<group>"; };
 		4BFCD373143692600037F3C7 /* BWIAPViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BWIAPViewController.xib; sourceTree = "<group>"; };
+		4BFCD37A1436E68C0037F3C7 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		4BFCD37B1436E68C0037F3C7 /* background@2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background@2.png"; sourceTree = "<group>"; };
+		4BFCD37C1436E68C0037F3C7 /* monitors.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = monitors.png; sourceTree = "<group>"; };
+		4BFCD37D1436E68C0037F3C7 /* monitors@2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "monitors@2.png"; sourceTree = "<group>"; };
+		4BFCD37E1436E68C0037F3C7 /* monitorsOverlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = monitorsOverlay.png; sourceTree = "<group>"; };
+		4BFCD37F1436E68C0037F3C7 /* monitorsOverlay@2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "monitorsOverlay@2.png"; sourceTree = "<group>"; };
 		80EF2C0E142F61BF00EBEFE9 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
 		80EF2C0F142F61C000EBEFE9 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 		80EF2C11142F682600EBEFE9 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
@@ -175,6 +187,7 @@
 		4B6F81071435BC480099CCB4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4BFCD3781436E68C0037F3C7 /* UI */,
 				4B6F81081435BC480099CCB4 /* testPlayer.json */,
 			);
 			path = Resources;
@@ -206,6 +219,27 @@
 				4BFCD35814366BF70037F3C7 /* BWPagedView.m */,
 			);
 			name = "Custom UI";
+			sourceTree = "<group>";
+		};
+		4BFCD3781436E68C0037F3C7 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				4BFCD3791436E68C0037F3C7 /* PlayerGeneral */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		4BFCD3791436E68C0037F3C7 /* PlayerGeneral */ = {
+			isa = PBXGroup;
+			children = (
+				4BFCD37A1436E68C0037F3C7 /* background.png */,
+				4BFCD37B1436E68C0037F3C7 /* background@2.png */,
+				4BFCD37C1436E68C0037F3C7 /* monitors.png */,
+				4BFCD37D1436E68C0037F3C7 /* monitors@2.png */,
+				4BFCD37E1436E68C0037F3C7 /* monitorsOverlay.png */,
+				4BFCD37F1436E68C0037F3C7 /* monitorsOverlay@2.png */,
+			);
+			path = PlayerGeneral;
 			sourceTree = "<group>";
 		};
 		807E6346142D531F00916E6B /* Content */ = {
@@ -312,6 +346,12 @@
 				4BFCD369143682580037F3C7 /* BWPlayerGeneralViewController.xib in Resources */,
 				4BFCD370143682E20037F3C7 /* BWLeaderBoardsViewController.xib in Resources */,
 				4BFCD375143692600037F3C7 /* BWIAPViewController.xib in Resources */,
+				4BFCD3801436E68C0037F3C7 /* background.png in Resources */,
+				4BFCD3811436E68C0037F3C7 /* background@2.png in Resources */,
+				4BFCD3821436E68C0037F3C7 /* monitors.png in Resources */,
+				4BFCD3831436E68C0037F3C7 /* monitors@2.png in Resources */,
+				4BFCD3841436E68C0037F3C7 /* monitorsOverlay.png in Resources */,
+				4BFCD3851436E68C0037F3C7 /* monitorsOverlay@2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
