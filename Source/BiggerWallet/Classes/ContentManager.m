@@ -44,7 +44,7 @@ static void *volatile _contentManagerInstance = nil;
     [super dealloc];
 }
 
-+ (ContentManager *)singleton
++ (ContentManager *)sharedManager
 {
     while(!_contentManagerInstance)
     {

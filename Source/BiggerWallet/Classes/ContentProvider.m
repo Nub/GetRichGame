@@ -117,7 +117,7 @@
 - (void)searchForStocksNamed:(NSString *)name 
                   completion:(void(^)(NSArray *data))block
 {    
-    BWNetworking *net = [[ContentManager singleton] networking];
+    BWNetworking *net = [[ContentManager sharedManager] networking];
     
     void (^myBlock)(NSArray *data) = [block copy];
     
@@ -134,7 +134,7 @@
 - (void)getStockNamed:(NSString *)name 
            completion:(void(^)(NSDictionary *data))block
 {
-    BWNetworking *net = [[ContentManager singleton] networking];
+    BWNetworking *net = [[ContentManager sharedManager] networking];
     
     void (^myBlock)(NSArray *data) = [block copy];
     

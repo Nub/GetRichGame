@@ -8,13 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-#import "BWPagedView.h"
+#import "ZTInfinitePagedV.h"
 
-@interface BiggerWalletViewController : UIViewController <BWPagedViewDelegate, BWPagedViewDataSource> {
+@interface BiggerWalletViewController : UIViewController <ZTInfinitePagedVDataSource, ZTInfinitePagedVDelegate> {
     NSArray *testVCs;
-    BWPagedView *pagedView;
+    ZTInfinitePagedV *pagedView;
 }
-@property (nonatomic, retain) IBOutlet BWPagedView *pagedView;
+@property (nonatomic, retain) IBOutlet ZTInfinitePagedV *pagedView;
 
 @property (nonatomic, retain) IBOutletCollection(UIViewController) NSArray *testVCs;
 

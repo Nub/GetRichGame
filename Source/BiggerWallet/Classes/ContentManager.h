@@ -26,6 +26,6 @@
 @property (readonly) ContentPurchaser *purchaser;
 @property (readonly) BWNetworking *networking;
 
-+ (ContentManager *)singleton;
++ (ContentManager *)sharedManager;
 
 @end

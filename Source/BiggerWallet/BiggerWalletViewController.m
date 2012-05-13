@@ -60,15 +60,16 @@
 
 #pragma mark - PagedView DataSource
 
-- (NSInteger)numberOfPagesInPagedView:(BWPagedView *)pagedView{
+- (NSInteger)numberOfPagesInPagedView:(ZTInfinitePagedV *)pagedView{
         
     return [testVCs count];
     
 }
 
-- (UIViewController*)pagedView:(BWPagedView *)pagedView viewControllerForPage:(NSInteger)page{
+- (UIView*)pagedView:(ZTInfinitePagedV *)pagedView viewForPage:(NSInteger)page
+{
     
-    return [testVCs objectAtIndex:page];
+    return [[testVCs objectAtIndex:page] view];
     
 }
 
